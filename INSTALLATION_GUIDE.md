@@ -5,7 +5,7 @@
 ### Option 1: Direct Git Installation
 
 ```bash
-npm install git+https://github.com/your-username/nest-config-validator.git
+npm install git+https://github.com/Dovlan1990/nestjs-config-validation.git
 ```
 
 ### Option 2: Add to package.json
@@ -13,7 +13,7 @@ npm install git+https://github.com/your-username/nest-config-validator.git
 ```json
 {
   "dependencies": {
-    "nest-config-validator": "git+https://github.com/your-username/nest-config-validator.git"
+    "nestjs-config-validator": "git+https://github.com/Dovlan1990/nestjs-config-validation.git"
   }
 }
 ```
@@ -48,7 +48,7 @@ import {
   AdvancedConfigValidator, 
   RootConfigSchema, 
   createNestJSConfiguration 
-} from 'nest-config-validator';
+} from 'nestjs-config-validator';
 ```
 
 ### Step 3: Update nestjs.integration.ts
@@ -60,7 +60,7 @@ import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 
 import { configSchema } from './config';
-import { createNestJSConfiguration } from 'nest-config-validator';
+import { createNestJSConfiguration } from 'nestjs-config-validator';
 
 @Module({
   imports: [
@@ -81,10 +81,10 @@ After installation, verify that everything works:
 
 ```bash
 # Test the import
-npx ts-node -e "import { AdvancedConfigValidator } from 'nest-config-validator'; console.log('✅ Package imported successfully');"
+npx ts-node -e "import { AdvancedConfigValidator } from 'nestjs-config-validator'; console.log('✅ Package imported successfully');"
 
 # Test with your config schema
-npx ts-node -e "import { createNestJSConfiguration } from 'nest-config-validator'; import { configSchema } from './src/config/schemas/config'; try { const config = createNestJSConfiguration(configSchema); console.log('✅ Configuration validation works!'); } catch (error) { console.log('❌ Error:', error.message); }"
+npx ts-node -e "import { createNestJSConfiguration } from 'nestjs-config-validator'; import { configSchema } from './src/config/schemas/config'; try { const config = createNestJSConfiguration(configSchema); console.log('✅ Configuration validation works!'); } catch (error) { console.log('❌ Error:', error.message); }"
 ```
 
 ## 🎯 Benefits of Migration

@@ -8,7 +8,7 @@ Add to `BizdoBackend/package.json`:
 ```json
 {
   "dependencies": {
-    "nest-config-validator": "git+https://github.com/YOUR_USERNAME/nest-config-validator.git"
+    "nestjs-config-validator": "git+https://github.com/Dovlan1990/nestjs-config-validation.git"
   }
 }
 ```
@@ -36,7 +36,7 @@ import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 
 import { configSchema } from './config';
-import { createNestJSConfiguration } from 'nest-config-validator';
+import { createNestJSConfiguration } from 'nestjs-config-validator';
 
 @Module({
   imports: [
@@ -63,7 +63,7 @@ import { RootConfigSchema } from './types';
 
 **After:**
 ```typescript
-import { AdvancedConfigValidator, RootConfigSchema } from 'nest-config-validator';
+import { AdvancedConfigValidator, RootConfigSchema } from 'nestjs-config-validator';
 ```
 
 ### Step 5: Test the Migration
@@ -72,10 +72,10 @@ Run these commands to verify everything works:
 
 ```bash
 # Test import
-npx ts-node -e "import { AdvancedConfigValidator } from 'nest-config-validator'; console.log('✅ Package imported successfully');"
+npx ts-node -e "import { AdvancedConfigValidator } from 'nestjs-config-validator'; console.log('✅ Package imported successfully');"
 
 # Test with your config schema
-npx ts-node -e "import { createNestJSConfiguration } from 'nest-config-validator'; import { configSchema } from './src/config/schemas/config'; try { const config = createNestJSConfiguration(configSchema); console.log('✅ Configuration validation works!'); } catch (error) { console.log('❌ Error:', error.message); }"
+npx ts-node -e "import { createNestJSConfiguration } from 'nestjs-config-validator'; import { configSchema } from './src/config/schemas/config'; try { const config = createNestJSConfiguration(configSchema); console.log('✅ Configuration validation works!'); } catch (error) { console.log('❌ Error:', error.message); }"
 
 # Test build
 npm run build
@@ -104,11 +104,11 @@ npm run build
 ### Import Errors
 ```bash
 # Check if package is installed
-npm list nest-config-validator
+npm list nestjs-config-validator
 
 # Reinstall if needed
-npm uninstall nest-config-validator
-npm install git+https://github.com/YOUR_USERNAME/nest-config-validator.git
+npm uninstall nestjs-config-validator
+npm install git+https://github.com/Dovlan1990/nestjs-config-validation.git
 ```
 
 ### TypeScript Errors
@@ -117,7 +117,7 @@ npm install git+https://github.com/YOUR_USERNAME/nest-config-validator.git
 npx tsc --noEmit
 
 # Check if types are available
-npx ts-node -e "import { RootConfigSchema } from 'nest-config-validator'; console.log('Types work');"
+npx ts-node -e "import { RootConfigSchema } from 'nestjs-config-validator'; console.log('Types work');"
 ```
 
 ### Validation Errors

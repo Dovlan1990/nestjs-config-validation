@@ -2,7 +2,7 @@
 
 ## 📦 Package Overview
 
-**Name**: `nest-config-validator`  
+**Name**: `nestjs-config-validator`  
 **Version**: 1.0.0  
 **Description**: Advanced configuration validator for NestJS with type-safe schema validation
 
@@ -19,7 +19,7 @@
 ## 📁 Package Structure
 
 ```
-nest-config-validator/
+nestjs-config-validator/
 ├── src/
 │   ├── index.ts              # Main exports
 │   ├── types.ts              # TypeScript type definitions
@@ -65,7 +65,7 @@ export function createNestJSConfiguration(rootSchema: RootConfigSchema);
 
 ### Basic Usage
 ```typescript
-import { AdvancedConfigValidator, RootConfigSchema } from 'nest-config-validator';
+import { AdvancedConfigValidator, RootConfigSchema } from 'nestjs-config-validator';
 
 const validator = new AdvancedConfigValidator();
 const result = validator.validateRootSchema(configSchema);
@@ -73,7 +73,7 @@ const result = validator.validateRootSchema(configSchema);
 
 ### NestJS Integration
 ```typescript
-import { createNestJSConfiguration } from 'nest-config-validator';
+import { createNestJSConfiguration } from 'nestjs-config-validator';
 
 @Module({
   imports: [
@@ -89,14 +89,14 @@ export class AppConfigModule {}
 
 ### From GitHub
 ```bash
-npm install git+https://github.com/YOUR_USERNAME/nest-config-validator.git
+npm install git+https://github.com/Dovlan1990/nestjs-config-validation.git
 ```
 
 ### In package.json
 ```json
 {
   "dependencies": {
-    "nest-config-validator": "git+https://github.com/YOUR_USERNAME/nest-config-validator.git"
+    "nestjs-config-validator": "git+https://github.com/Dovlan1990/nestjs-config-validation.git"
   }
 }
 ```

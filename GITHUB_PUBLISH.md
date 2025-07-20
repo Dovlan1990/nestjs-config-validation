@@ -5,7 +5,7 @@
 ### Step 1: Create GitHub Repository
 
 1. Go to GitHub and create a new repository
-2. Name it `nest-config-validator`
+2. Name it `nestjs-config-validation`
 3. Make it public
 4. Don't initialize with README (we already have one)
 
@@ -17,12 +17,12 @@ Update the URLs in `package.json`:
 {
   "repository": {
     "type": "git",
-    "url": "https://github.com/YOUR_USERNAME/nest-config-validator.git"
+    "url": "https://github.com/Dovlan1990/nestjs-config-validation.git"
   },
   "bugs": {
-    "url": "https://github.com/YOUR_USERNAME/nest-config-validator/issues"
+    "url": "https://github.com/Dovlan1990/nestjs-config-validation/issues"
   },
-  "homepage": "https://github.com/YOUR_USERNAME/nest-config-validator#readme"
+  "homepage": "https://github.com/Dovlan1990/nestjs-config-validation#readme"
 }
 ```
 
@@ -39,7 +39,7 @@ git add .
 git commit -m "Initial commit: NestJS Configuration Validator"
 
 # Add remote origin
-git remote add origin https://github.com/YOUR_USERNAME/nest-config-validator.git
+git remote add origin https://github.com/Dovlan1990/nestjs-config-validation.git
 
 # Push to GitHub
 git push -u origin main
@@ -66,7 +66,7 @@ git push -u origin main
    ## Installation
    
    ```bash
-   npm install git+https://github.com/YOUR_USERNAME/nest-config-validator.git
+   npm install git+https://github.com/Dovlan1990/nestjs-config-validation.git
    ```
    ```
 
@@ -78,7 +78,7 @@ Add to `package.json`:
 ```json
 {
   "dependencies": {
-    "nest-config-validator": "git+https://github.com/YOUR_USERNAME/nest-config-validator.git"
+    "nestjs-config-validator": "git+https://github.com/Dovlan1990/nestjs-config-validation.git"
   }
 }
 ```
@@ -94,7 +94,7 @@ import {
   AdvancedConfigValidator, 
   RootConfigSchema, 
   createNestJSConfiguration 
-} from 'nest-config-validator';
+} from 'nestjs-config-validator';
 
 // Define your schema
 const configSchema: RootConfigSchema = {

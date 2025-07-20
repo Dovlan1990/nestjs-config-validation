@@ -1,4 +1,4 @@
-import { RootConfigSchema, AdvancedConfigValidator, createNestJSConfiguration } from '../src';
+import { RootConfigSchema, AdvancedConfigValidator, createNestJSConfiguration } from 'nestjs-config-validator';
 
 // Define your configuration schema
 const configSchema: RootConfigSchema = {

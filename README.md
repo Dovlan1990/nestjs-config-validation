@@ -1,4 +1,4 @@
-# Nest Config Validator
+# NestJS Config Validator
 
 Advanced configuration validator for NestJS with type-safe schema validation.
 
@@ -15,7 +15,7 @@ Advanced configuration validator for NestJS with type-safe schema validation.
 ## 📦 Installation
 
 ```bash
-npm install git+https://github.com/your-username/nest-config-validator.git
+npm install git+https://github.com/Dovlan1990/nestjs-config-validation.git
 ```
 
 Or add to your `package.json`:
@@ -23,7 +23,7 @@ Or add to your `package.json`:
 ```json
 {
   "dependencies": {
-    "nest-config-validator": "git+https://github.com/your-username/nest-config-validator.git"
+    "nestjs-config-validator": "git+https://github.com/Dovlan1990/nestjs-config-validation.git"
   }
 }
 ```
@@ -33,7 +33,7 @@ Or add to your `package.json`:
 ### 1. Define your configuration schema
 
 ```typescript
-import { RootConfigSchema } from 'nest-config-validator';
+import { RootConfigSchema } from 'nestjs-config-validator';
 
 export const configSchema: RootConfigSchema = {
   description: 'Application Configuration',
@@ -104,7 +104,7 @@ export const configSchema: RootConfigSchema = {
 ```typescript
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
-import { createNestJSConfiguration } from 'nest-config-validator';
+import { createNestJSConfiguration } from 'nestjs-config-validator';
 import { configSchema } from './config.schema';
 
 @Module({
@@ -125,7 +125,7 @@ export class AppConfigModule {}
 ### Using the validator directly
 
 ```typescript
-import { AdvancedConfigValidator } from 'nest-config-validator';
+import { AdvancedConfigValidator } from 'nestjs-config-validator';
 
 const validator = new AdvancedConfigValidator('./config.json');
 const result = validator.validateRootSchema(configSchema);
@@ -138,7 +138,7 @@ if (!result.valid) {
 ### Validating individual schemas
 
 ```typescript
-import { AdvancedConfigValidator } from 'nest-config-validator';
+import { AdvancedConfigValidator } from 'nestjs-config-validator';
 
 const validator = new AdvancedConfigValidator();
 const result = validator.validateSchema(databaseSchema, 'database');
@@ -151,7 +151,7 @@ if (!result.valid) {
 ### Getting validated configuration
 
 ```typescript
-import { AdvancedConfigValidator } from 'nest-config-validator';
+import { AdvancedConfigValidator } from 'nestjs-config-validator';
 
 const validator = new AdvancedConfigValidator();
 const config = validator.getValidatedConfig(databaseSchema, 'database');
@@ -288,7 +288,7 @@ The package provides seamless integration with NestJS:
 ```typescript
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
-import { createNestJSConfiguration } from 'nest-config-validator';
+import { createNestJSConfiguration } from 'nestjs-config-validator';
 
 @Module({
   imports: [

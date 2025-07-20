@@ -1,5 +1,5 @@
 {
-  "name": "nest-config-validator",
+  "name": "nestjs-config-validator",
   "version": "1.0.0",
   "description": "Advanced configuration validator for NestJS with type-safe schema validation",
   "main": "dist/index.js",
@@ -22,7 +22,9 @@
     "typescript",
     "validation",
     "config",
-    "type-safe"
+    "type-safe",
+    "nest",
+    "config-validation"
   ],
   "author": "BizDo Team",
   "license": "MIT",
