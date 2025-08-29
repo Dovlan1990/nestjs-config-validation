@@ -14,8 +14,9 @@ Advanced configuration validator for NestJS with type-safe schema validation.
 
 ## 📦 Installation
 
+### From npm (Recommended)
 ```bash
-npm install git+https://github.com/Dovlan1990/nestjs-config-validation.git
+npm install nestjs-config-validator
 ```
 
 Or add to your `package.json`:
@@ -23,7 +24,7 @@ Or add to your `package.json`:
 ```json
 {
   "dependencies": {
-    "nestjs-config-validator": "git+https://github.com/Dovlan1990/nestjs-config-validation.git"
+    "nestjs-config-validator": "^1.0.0"
   }
 }
 ```
